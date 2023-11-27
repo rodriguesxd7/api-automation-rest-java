@@ -28,6 +28,16 @@ public class TestsRequest extends Requests {
     }
 
     @Test
+    public void getUserById () throws IOException {
+        getMethod(url + "users/1", 200);
+    }
+
+    @Test
+    public void getInvalidUser () throws IOException {
+        getMethod(url + "users/0", 404);
+    }
+
+    @Test
     public void loginWithInvalidCredentials() {
         Response response = given()
                 .headers("Content-Type", "application/json")
