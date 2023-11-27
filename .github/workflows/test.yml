@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout projeto
         uses: actions/checkout@v2
 
       - name: Set up JDK 17.0.9
