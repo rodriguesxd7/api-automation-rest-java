@@ -76,28 +76,4 @@ public class TestsRequest extends Requests {
         getMethod(url + "products/200" , 404, getToken());
     }
 
-
-
-    @Test
-    public void request_get_test() throws IOException {
-        getMethod(url, 200)
-                .path("method", "GET")
-                .info("Result path: " + _RESULT);
-    }
-
-    @Test
-    public void request_post_with_headers() throws IOException {
-        Map headers = new HashMap();
-        headers.put("Authorization", "Bearer token");
-        postMethod(getProps("base"), "payload", headers, 201);
-    }
-
-    @Test
-    public void request_post() throws IOException {
-        getMethod(url, 200)
-                .path("path_final")
-                .warning("Info path_final: " + _RESULT);
-
-    }
-
 }

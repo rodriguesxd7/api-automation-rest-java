@@ -8,12 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0b0719-30fb-46eb-8ef4-6a93dfe85f5c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/functions/Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/functions/Requests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hooks/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestsRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,14 +50,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.2375" />
+    <property name="project.structure.side.proportion" value="0.4717286" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
   </component>
-  <component name="RunManager" selected="TestNG.TestsRequest.getAllUsers">
-    <configuration name="TestsRequest.addProduct" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="javarestassured" />
+  <component name="RunManager" selected="TestNG.TestsRequest">
+    <configuration name="TestsRequest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiAutomationRest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestsRequest" />
-      <option name="METHOD_NAME" value="addProduct" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -139,19 +138,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.Unnamed" />
-      <item itemvalue="TestNG.TestsRequest.addProduct" />
       <item itemvalue="TestNG.TestsRequest.getProductsWithoutAuth" />
       <item itemvalue="TestNG.TestsRequest.getProductsWById" />
       <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
       <item itemvalue="TestNG.TestsRequest.getAllUsers" />
+      <item itemvalue="TestNG.TestsRequest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestsRequest" />
         <item itemvalue="TestNG.TestsRequest.getAllUsers" />
         <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
         <item itemvalue="TestNG.TestsRequest.getProductsWById" />
         <item itemvalue="TestNG.TestsRequest.getProductsWithoutAuth" />
-        <item itemvalue="TestNG.TestsRequest.addProduct" />
       </list>
     </recent_temporary>
   </component>
