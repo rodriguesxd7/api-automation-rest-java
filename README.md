@@ -20,10 +20,6 @@ Hooks: Contém a configuração do report das execuções e o métodos com tags 
 Executando os Testes
 Para executar os testes, basta dar um play na classe TestsRequest
 
-bash
-mvn test
-Isso executará os testes configurados no projeto.
-
 Detalhes Técnicos
 O projeto utiliza o framework RestAssured para realizar chamadas e asserções em APIs.
 As asserções são feitas usando as funcionalidades do JUnit e/ou TestNG.
