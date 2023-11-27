@@ -68,7 +68,7 @@ public class TestsRequest extends Requests {
 
     @Test
     public void getProductsById() throws IOException {
-        getMethod(url + "products/9" , 200, getToken());
+        getMethod(url + "products/9" , 20, getToken());
     }
 
     @Test
