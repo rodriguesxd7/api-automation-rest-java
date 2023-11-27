@@ -20,3 +20,6 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: '17'
+
+      - name: Run api tests
+        uses: mvn test -Dtest=TestRequest
