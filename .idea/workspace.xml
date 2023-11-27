@@ -8,7 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0b0719-30fb-46eb-8ef4-6a93dfe85f5c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestsRequest.java" afterDir="false" />
     </list>
@@ -53,11 +55,24 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.2375" />
     <property name="project.structure.side.proportion" value="0.4717286" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="TestNG.TestsRequest">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="com.br.highlevel.apiAutomationRest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="com.br.highlevel.apiAutomationRest" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestsRequest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="apiAutomationRest" />
+      <module name="com.br.highlevel.apiAutomationRest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestsRequest" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -68,7 +83,7 @@
       </method>
     </configuration>
     <configuration name="TestsRequest.getAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="apiAutomationRest" />
+      <module name="com.br.highlevel.apiAutomationRest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestsRequest" />
       <option name="METHOD_NAME" value="getAllUsers" />
@@ -137,20 +152,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.Unnamed" />
-      <item itemvalue="TestNG.TestsRequest.getProductsWithoutAuth" />
-      <item itemvalue="TestNG.TestsRequest.getProductsWById" />
-      <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
-      <item itemvalue="TestNG.TestsRequest.getAllUsers" />
       <item itemvalue="TestNG.TestsRequest" />
+      <item itemvalue="TestNG.TestsRequest.getAllUsers" />
+      <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
+      <item itemvalue="TestNG.TestsRequest.getProductsWById" />
+      <item itemvalue="TestNG.TestsRequest.getProductsWithoutAuth" />
+      <item itemvalue="TestNG.Unnamed" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestsRequest" />
-        <item itemvalue="TestNG.TestsRequest.getAllUsers" />
-        <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
-        <item itemvalue="TestNG.TestsRequest.getProductsWById" />
         <item itemvalue="TestNG.TestsRequest.getProductsWithoutAuth" />
+        <item itemvalue="TestNG.TestsRequest.getProductsWById" />
+        <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
+        <item itemvalue="TestNG.TestsRequest.getAllUsers" />
       </list>
     </recent_temporary>
   </component>

@@ -11,6 +11,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
+@Test
 public class TestsRequest extends Requests {
     String url;
     {
@@ -68,7 +69,7 @@ public class TestsRequest extends Requests {
 
     @Test
     public void getProductsById() throws IOException {
-        getMethod(url + "products/9" , 20, getToken());
+        getMethod(url + "products/9" , 200, getToken());
     }
 
     @Test
