@@ -11,10 +11,9 @@ import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Map;
@@ -24,22 +23,50 @@ import static io.restassured.RestAssured.given;
 
 public class Requests extends Hooks {
 
-    private Response response;
+    private Response  response;
     private JSONObject json;
     public Object _RESULT;
 
-    protected String getProps(String prop) throws IOException {
+    public String readPost () throws IOException {
+        String file;
+        return file = new String(Files.readAllBytes(Paths.get("src/main/resources/postToAddNewProduct.json")));
+    }
 
+    protected String getProps(String prop) throws IOException {
         FileInputStream in = new FileInputStream("src/main/resources/config.properties");
         Properties props = new Properties();
         props.load(in);
         return props.getProperty(prop);
     }
 
-    public Requests _GET(String endpoint, int statusCode) {
+    public Object getToken() {
+        response = given()
+                .headers("Content-Type", "application/json")
+                .body("{\n" +
+                        "\"username\": \"kminchelle\",\n" +
+                        "\"password\": \"0lelplR\"\n" +
+                        "}")
+                .when()
+                .post("https://dummyjson.com/auth/login")
+                .then().statusCode(200).extract().response();
+
+        Object token = null;
+        JSONObject obj = new JSONObject(response.asString());
+        if(response.statusCode() == 200) {
+            for (int i = 0; i <= obj.length(); i ++) {
+                if(obj.has("token")) {
+                    token = obj.getString("token");
+                }
+            }
+        }
+        return token;
+    }
+
+    public Requests getMethod(String endpoint, int statusCode) {
         RestAssured.reset();
         ByteArrayOutputStream ouContent = new ByteArrayOutputStream();
         PrintStream captureStream = new PrintStream(ouContent);
+
         RestAssured.filters(
                 new RequestLoggingFilter(captureStream),
                 new ResponseLoggingFilter(captureStream),
@@ -59,7 +86,34 @@ public class Requests extends Hooks {
         return this;
     }
 
-    public Requests _POST(String endpoint, String payload, int statusCode) {
+    public Requests getMethod(String endpoint, int statusCode, Object token) {
+        RestAssured.reset();
+        ByteArrayOutputStream ouContent = new ByteArrayOutputStream();
+        PrintStream captureStream = new PrintStream(ouContent);
+
+        RestAssured.filters(
+                new RequestLoggingFilter(captureStream),
+                new ResponseLoggingFilter(captureStream),
+                new ErrorLoggingFilter(captureStream)
+        );
+        response = given()
+                .headers("Authorization", token)
+                .when()
+                .get(endpoint);
+        formatLog(ouContent.toString());
+
+        test.get().info("Request response: ");
+        test.get().info(MarkupHelper.createCodeBlock(response.asString(), CodeLanguage.JSON));
+
+        response.then().statusCode(statusCode);
+
+
+
+        response = response.then().extract().response();
+        return this;
+    }
+
+    public Requests postMethod(String endpoint, String payload, int statusCode) {
         RestAssured.reset();
         ByteArrayOutputStream ouContent = new ByteArrayOutputStream();
         PrintStream captureStream = new PrintStream(ouContent);
@@ -86,7 +140,7 @@ public class Requests extends Hooks {
         return this;
     }
 
-    public Requests _POST(String endpoint, String payload, Map headers, int statusCode) {
+    public Requests postMethod(String endpoint, String payload, Map headers, int statusCode) {
         RestAssured.reset();
         ByteArrayOutputStream ouContent = new ByteArrayOutputStream();
         PrintStream captureStream = new PrintStream(ouContent);
@@ -139,6 +193,7 @@ public class Requests extends Hooks {
         return formattedLog.toString();
     }
 
+
     private Object findField(JSONObject jsonObject, String targetField) {
 
         if (jsonObject == null) return null;
@@ -168,6 +223,7 @@ public class Requests extends Hooks {
         return null;
     }
 
+
     private Object searchArray(JSONArray jsonArray, String targetFiled) {
         for (int i = 0; i < jsonArray.length(); i++) {
             Object item = jsonArray.get(i);
@@ -184,8 +240,6 @@ public class Requests extends Hooks {
                 }
             }
         }
-
-
         return null;
     }
 

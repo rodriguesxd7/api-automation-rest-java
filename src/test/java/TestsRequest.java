@@ -1,5 +1,7 @@
 import functions.Requests;
+import io.restassured.response.Response;
 import org.hamcrest.Matchers;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -7,58 +9,79 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 
 public class TestsRequest extends Requests {
-    String payload = "{\n" +
-            "\"data\": {\n" +
-            "\"id\": 2,\n" +
-            "\"email\": \"janet.weaver@reqres.in\",\n" +
-            "\"first_name\": \"Janet\",\n" +
-            "\"last_name\": \"Weaver\",\n" +
-            "\"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\n" +
-            "},\n" +
-            "\"support\": {\n" +
-            "\"url\": \"https://reqres.in/#support-heading\",\n" +
-            "\"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\n" +
-            "}\n" +
-            "}";
-
-    @Test
-    public void requisition_get() {
-        given()
-                .when()
-                .get("https://reqres.in/api/users/2")
-                .then().body("data.id", Matchers.equalTo(2));
+    String url;
+    {
+        try {
+            url = getProps("base");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
-    public void requisition_post() {
-        given()
-                .when()
-                .headers("", "")
-                .body("")
-                .post("https://reqres.in/api/users/2")
-                .then().log().body().body("id", Matchers.notNullValue());
-
-        given()
-                .when()
-                .headers("", "")
-                .body("")
-                .post("https://reqres.in/api/users/2")
-                .then().log().body().body("id", Matchers.notNullValue());
-        given()
-                .when()
-                .headers("", "")
-                .body("")
-                .post("https://reqres.in/api/users/2")
-                .then().log().body().body("id", Matchers.notNullValue());
+    public void getAllUsers () throws IOException {
+        getMethod(url + "users", 200);
     }
 
     @Test
-    public void request_get() throws IOException {
-        _GET(getProps("base"), 200)
-                .path("id", 1, 3, 4, 5, 6, 9, 7, 2)
+    public void loginWithInvalidCredentials() {
+        Response response = given()
+                .headers("Content-Type", "application/json")
+                .body("{\n" +
+                        "\"username\": \"bruno\",\n" +
+                        "\"password\": \"1234\"\n" +
+                        "}")
+                .when()
+                .post(url + "auth/login")
+                .then().statusCode(400).extract().response();
+
+        Assert.assertEquals(response.then().extract().statusCode(), 400);
+    }
+
+    @Test
+    public void getAllProducts() throws IOException {
+        getMethod(url + "auth/products" , 200, getToken());
+    }
+
+    @Test
+    public void getProductsWithoutToken() throws IOException {
+        getMethod(url + "auth/products" , 403, "");
+    }
+
+    @Test
+    public void getProductsWithInvalidToken() throws IOException {
+        getMethod(url + "auth/products" , 401, "1234");
+    }
+
+    @Test
+    public void addProduct() throws IOException {
+        postMethod(url + "products/add", readPost(), 200 );
+    }
+
+    @Test
+    public void getProductsWithoutAuth() throws IOException {
+        getMethod(url + "products" , 200, getToken());
+    }
+
+    @Test
+    public void getProductsById() throws IOException {
+        getMethod(url + "products/9" , 200, getToken());
+    }
+
+    @Test
+    public void getProductsByNonexistentId() throws IOException {
+        getMethod(url + "products/200" , 404, getToken());
+    }
+
+
+
+    @Test
+    public void request_get_test() throws IOException {
+        getMethod(url, 200)
+                .path("method", "GET")
                 .info("Result path: " + _RESULT);
     }
 
@@ -66,18 +89,15 @@ public class TestsRequest extends Requests {
     public void request_post_with_headers() throws IOException {
         Map headers = new HashMap();
         headers.put("Authorization", "Bearer token");
-        _POST(getProps("base"), payload, headers, 201)
-        ;
+        postMethod(getProps("base"), "payload", headers, 201);
     }
 
-    //post auth
-    // get id
-    // post usando id
     @Test
     public void request_post() throws IOException {
-        _GET(getProps("endpoint"), 200)
+        getMethod(url, 200)
                 .path("path_final")
                 .warning("Info path_final: " + _RESULT);
 
     }
+
 }

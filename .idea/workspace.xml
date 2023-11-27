@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0b0719-30fb-46eb-8ef4-6a93dfe85f5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/functions/Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/functions/Requests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestsRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +31,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2WaaU2lwf882n9E36GeZSfSRCUc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -44,52 +50,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editing.templates"
-  }
-}]]></component>
-  <component name="RunManager" selected="TestNG.TestsRequest">
-    <configuration name="TestsRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="javarestassuredextentreport" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="TestNG.TestsRequest.getAllUsers">
+    <configuration name="TestsRequest.addProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="javarestassured" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestsRequest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="addProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestsRequest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="javarestassuredextentreport" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="" />
+    <configuration name="TestsRequest.getAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiAutomationRest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestsRequest" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
+      <option name="METHOD_NAME" value="getAllUsers" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsRequest.getProductsByNonexistentId" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="javarestassured" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestsRequest" />
+      <option name="METHOD_NAME" value="getProductsByNonexistentId" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsRequest.getProductsWById" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="javarestassured" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestsRequest" />
+      <option name="METHOD_NAME" value="getProductsWById" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsRequest.getProductsWithoutAuth" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="javarestassured" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestsRequest" />
+      <option name="METHOD_NAME" value="getProductsWithoutAuth" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -118,14 +138,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestsRequest" />
       <item itemvalue="TestNG.Unnamed" />
-      <item itemvalue="TestNG.TestsRequest" />
+      <item itemvalue="TestNG.TestsRequest.addProduct" />
+      <item itemvalue="TestNG.TestsRequest.getProductsWithoutAuth" />
+      <item itemvalue="TestNG.TestsRequest.getProductsWById" />
+      <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
+      <item itemvalue="TestNG.TestsRequest.getAllUsers" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestsRequest" />
-        <item itemvalue="JUnit.TestsRequest" />
+        <item itemvalue="TestNG.TestsRequest.getAllUsers" />
+        <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
+        <item itemvalue="TestNG.TestsRequest.getProductsWById" />
+        <item itemvalue="TestNG.TestsRequest.getProductsWithoutAuth" />
+        <item itemvalue="TestNG.TestsRequest.addProduct" />
       </list>
     </recent_temporary>
   </component>
