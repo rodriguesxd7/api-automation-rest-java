@@ -96,7 +96,7 @@ public class Hooks {
         return null;
     }
 
-    protected void formatLog(String captureLog) {
+    protected String formatLog(String captureLog) {
         String[] lines = captureLog.split("\n");
         StringBuilder formattedLog = new StringBuilder();
         System.out.println(captureLog);
@@ -117,6 +117,8 @@ public class Hooks {
                 i--;
             }
         }
+        return formattedLog.toString();
+
     }
 
 }
