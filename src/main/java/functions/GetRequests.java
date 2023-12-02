@@ -3,23 +3,14 @@ package functions;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import hooks.Hooks;
-import hooks.Utils;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.ErrorLoggingFilter;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.response.Response;
-import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Properties;
-
 import static io.restassured.RestAssured.given;
 
 public class GetRequests extends Hooks {
