@@ -3,6 +3,7 @@ package functions;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import hooks.Hooks;
+import hooks.UtilsRest;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.ErrorLoggingFilter;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -16,9 +17,6 @@ import static io.restassured.RestAssured.given;
 public class GetRequests extends Hooks {
 
     private Response  response;
-    private JSONObject json;
-    public Object _RESULT;
-
     public Object getToken() {
         response = given()
                 .headers("Content-Type", "application/json")
@@ -115,32 +113,6 @@ public class GetRequests extends Hooks {
         test.get().info(MarkupHelper.createCodeBlock(response.asString(), CodeLanguage.JSON));
         response.then().statusCode(statusCode);
         response = response.then().extract().response();
-
-
         return this;
     }
-
-
-    public GetRequests path(String path, Object... value) {
-        json = new JSONObject(response.asString());
-        _RESULT = findField(json, path);
-        test.get().info("Path validation: ** " + path + " ** find: " + _RESULT);
-        if (value.length >= 1 && !Arrays.asList(value).contains(_RESULT)) {
-            throw new IllegalArgumentException("The value " + _RESULT + " does not match any of the expected value for path: " + path);
-        }
-        return this;
-    }
-
-    public GetRequests warning(String info) {
-        test.get().warning(info);
-
-        return this;
-    }
-
-    public GetRequests info(String info) {
-        test.get().info(info);
-
-        return this;
-    }
-
 }

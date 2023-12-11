@@ -1,0 +1,8 @@
+Cenários GET no endpoint POSTS
+Realizar request GET em todos os posts
+Realizar request GET por id
+Realizar request GET em comentários por postsId
+Realizar request GET em comentarios por id
+
+Cenário POST no endpoint POSTS
+Realizar request POST com novo post

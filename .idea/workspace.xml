@@ -7,7 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0b0719-30fb-46eb-8ef4-6a93dfe85f5c" name="Changes" comment="Trying to fix the symbol error" />
+    <list default="true" id="9c0b0719-30fb-46eb-8ef4-6a93dfe85f5c" name="Changes" comment="Trying to fix the symbol error">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/functions/GetRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/functions/GetRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hooks/UtilsRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hooks/UtilsRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/postToAddNewProduct.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/postToAddNewProduct.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestsRequest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,9 +50,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2WaaU2lwf882n9E36GeZSfSRCUc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -52,17 +63,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "NewBrunosBranch",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.16920471",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.TestsRequest (1)">
+  <component name="RunManager" selected="TestNG.TestsRequest.postNewPost">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="com.br.highlevel.apiAutomationRest" />
       <method v="2">
@@ -76,7 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestsRequest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestsRequest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="javarestassuredextentreport" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestsRequest" />
@@ -87,22 +104,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestsRequest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com.br.highlevel.apiAutomationRest" />
+    <configuration name="TestsRequest.getCommentsById" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="javarestassuredextentreport" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestsRequest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestsRequest.getProductsByNonexistentId" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="javarestassured" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestsRequest" />
-      <option name="METHOD_NAME" value="getProductsByNonexistentId" />
+      <option name="METHOD_NAME" value="getCommentsById" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -110,11 +116,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestsRequest.getProductsWById" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="javarestassured" />
+    <configuration name="TestsRequest.getCommentsFromPostId" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="javarestassuredextentreport" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestsRequest" />
-      <option name="METHOD_NAME" value="getProductsWById" />
+      <option name="METHOD_NAME" value="getCommentsFromPostId" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -122,11 +128,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestsRequest.getProductsWithoutAuth" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="javarestassured" />
+    <configuration name="TestsRequest.getPostById" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="javarestassuredextentreport" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestsRequest" />
-      <option name="METHOD_NAME" value="getProductsWithoutAuth" />
+      <option name="METHOD_NAME" value="getPostById" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsRequest.postNewPost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="javarestassuredextentreport" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestsRequest" />
+      <option name="METHOD_NAME" value="postNewPost" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -157,19 +175,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.Unnamed" />
-      <item itemvalue="TestNG.TestsRequest (1)" />
+      <item itemvalue="TestNG.TestsRequest.getCommentsById" />
+      <item itemvalue="TestNG.TestsRequest.getCommentsFromPostId" />
+      <item itemvalue="TestNG.TestsRequest.getPostById" />
+      <item itemvalue="TestNG.TestsRequest.postNewPost" />
       <item itemvalue="TestNG.TestsRequest" />
-      <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
-      <item itemvalue="TestNG.TestsRequest.getProductsWById" />
-      <item itemvalue="TestNG.TestsRequest.getProductsWithoutAuth" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestsRequest (1)" />
+        <item itemvalue="TestNG.TestsRequest.postNewPost" />
+        <item itemvalue="TestNG.TestsRequest.getCommentsById" />
+        <item itemvalue="TestNG.TestsRequest.getCommentsFromPostId" />
         <item itemvalue="TestNG.TestsRequest" />
-        <item itemvalue="TestNG.TestsRequest.getProductsWithoutAuth" />
-        <item itemvalue="TestNG.TestsRequest.getProductsWById" />
-        <item itemvalue="TestNG.TestsRequest.getProductsByNonexistentId" />
+        <item itemvalue="TestNG.TestsRequest.getPostById" />
       </list>
     </recent_temporary>
   </component>
@@ -182,6 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696973156786</updated>
       <workItem from="1701532173052" duration="4737000" />
+      <workItem from="1702128726021" duration="16099000" />
     </task>
     <task id="LOCAL-00001" summary="PostRequest class &#10;Utils class">
       <option name="closed" value="true" />
@@ -237,5 +256,16 @@
     <MESSAGE value="PostRequest class &#10;Utils class&#10;Remove unused imports from GetRequests" />
     <MESSAGE value="Trying to fix the symbol error" />
     <option name="LAST_COMMIT_MESSAGE" value="Trying to fix the symbol error" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hooks/UtilsRest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -44,8 +44,7 @@ public class Hooks {
 
     @AfterSuite
     public void afterSuite() {
-        extent.flush();
-    }
+        extent.flush();}
 
 
     private Object searchArray(JSONArray jsonArray, String targetFiled) {
@@ -68,9 +67,7 @@ public class Hooks {
     }
 
     protected Object findField(JSONObject jsonObject, String targetField) {
-
         if (jsonObject == null) return null;
-
         if (jsonObject.has(targetField)) {
             return jsonObject.get(targetField);
         }
@@ -89,10 +86,8 @@ public class Hooks {
                 if (result != null) {
                     return result;
                 }
-
             }
         }
-
         return null;
     }
 
@@ -118,7 +113,5 @@ public class Hooks {
             }
         }
         return formattedLog.toString();
-
     }
-
 }
